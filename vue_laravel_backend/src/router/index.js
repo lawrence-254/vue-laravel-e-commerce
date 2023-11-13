@@ -13,38 +13,54 @@ const router = createRouter({
             component: AppLayout,
             meta: {
                 requiresAuth: true
-            }
-        },
-        {
-            path: '/',
-            name: 'home'
+            },
+            children: [
+                {
+                    path: '/',
+                    name: 'app.home'
 
-        },
-        {
-            path: '/about',
-            name: 'about'
+                },
+                {
+                    path: '/products',
+                    name: 'app.products'
 
+                },
+                {
+                    path: '/dashboard',
+                    name: 'app.dashboard',
+                    component: Dashboard
+                }
+            ]
         },
-        {
-            path: '/dashboard',
-            name: 'dashboard',
-            component: Dashboard
-        },
+
         {
             path: '/login',
             name: 'login',
-            component: Login
+            component: Login,
+            meta: {
+                requiresGuest: true
+            }
         },
         {
             path: '/requestPassword',
             name: 'requestPassword',
-            component: RequestPassword
+            component: RequestPassword,
+            meta: {
+                requiresGuest: true
+            }
         },
         {
-            path: '/resetPassword',
+            path: '/resetPassword/:token',
             name: 'resetPassword',
-            component: ResetPassword
+            component: ResetPassword,
+            meta: {
+                requiresGuest: true
+            }
+        },
+        {
+            path: '/:pathMatch(.*)'
         }
+
     ]
 })
 
