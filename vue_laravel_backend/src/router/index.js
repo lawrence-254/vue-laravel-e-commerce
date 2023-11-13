@@ -8,6 +8,14 @@ const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
+            path: '/app',
+            name: 'app',
+            component: AppLayout,
+            meta: {
+                requiresAuth: true
+            }
+        },
+        {
             path: '/',
             name: 'home'
 
