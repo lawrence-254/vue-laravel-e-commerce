@@ -46,9 +46,7 @@
 <script setup>
 import GuestLayout from '../components/GuestLayout.vue';
 
-function login(){
-    console.log('logged in');
-}
+
 </script>
 <style scoped>
 /* Your scoped styles here */

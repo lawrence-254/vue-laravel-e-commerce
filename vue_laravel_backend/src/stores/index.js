@@ -1,4 +1,3 @@
-// const { createStore } = require("vuex");
 import { createStore } from "vuex";
 
 const store = createStore({

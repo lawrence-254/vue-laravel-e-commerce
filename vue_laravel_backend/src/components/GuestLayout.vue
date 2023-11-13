@@ -10,9 +10,7 @@
         </div>
 
 <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-
      <slot></slot>
-
 
 </div>
 </div>
@@ -22,7 +20,6 @@ const {title} = defineProps({
     title: String
 
 })
-
 </script>
 
 <style>
