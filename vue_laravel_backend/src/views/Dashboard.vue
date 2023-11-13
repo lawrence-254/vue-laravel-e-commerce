@@ -1,15 +1,13 @@
 <!-- <script setup>
-const Login = {
-    name: "Login",
+const Dashboard={
+    name: "Dashboard"
 };
 </script> -->
 <template>
-    <h1>Login form</h1>
+    <h1>Dashboard</h1>
 </template>
 
 
 <style scoped>
 /* Your scoped styles here */
 </style>
-
-
