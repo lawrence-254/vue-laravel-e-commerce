@@ -1,4 +1,8 @@
 <script setup>
+// import { computed } from '@vue/reactivity';
+import { computed } from 'vue';
+import store from '../stores';
+const test = computed(()=>store.state.test)
 defineProps({
   msg: {
     type: String,
@@ -10,6 +14,7 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="bg-purple-500">{{ msg }}</h1>
+    {{ test }}
     <h3 class="bg-purple-500">
       You’ve successfully created a project with
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
