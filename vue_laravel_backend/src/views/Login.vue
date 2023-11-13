@@ -1,8 +1,7 @@
 <template>
 
 
-<GuestLayout title="Sign in into your account">
-            <!-- <form class="space-y-6" action="#" method="POST"> -->
+<GuestLayout title="Sign in into your account" @submit="login">
                 <div>
                     <label class="block text-sm font-medium leading-6 text-gray-900">Login</label>
                     <div class="mt-2">
@@ -45,6 +44,10 @@
 
 <script setup>
 import GuestLayout from '../components/GuestLayout.vue';
+
+function login(){
+    console.log('logged in');
+}
 </script>
 <style scoped>
 /* Your scoped styles here */

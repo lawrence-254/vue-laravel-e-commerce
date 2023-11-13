@@ -10,7 +10,7 @@
         </div>
 
 <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-<form class="space-y-6" action="#" method="POST">
+<form class="space-y-6" @submit.prevent="emit('submit')" method="POST">
      <slot></slot>
 </form>
 
@@ -22,6 +22,7 @@ const {title} = defineProps({
     title: String
 
 })
+const emit = defineEmits(['submit'])
 </script>
 
 <style>
